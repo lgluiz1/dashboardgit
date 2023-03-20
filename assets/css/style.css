@@ -1,0 +1,426 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    list-style: none;
+  }
+  
+  :root{
+    --cor-fundo: #ecf0f4;
+    --cor-botões-header: #747577;
+    --cor-hover-botoes-header: #000;
+    --cor-sidebar: #74757749;
+  }
+  body {
+    width: 100vw;
+    height: 100vh;
+    background: var(--cor-fundo);
+    display: grid;
+    grid-template-areas: 
+    " topo topo topo topo "
+    " nav conteudo conteudo conteudo"
+    " nav conteudo conteudo conteudo"
+    " nav conteudo conteudo conteudo"
+    " nav conteudo conteudo conteudo"
+    " nav conteudo conteudo conteudo";
+}
+header{
+    grid-area: topo;
+    width: 100%;
+    height: 70px;   
+}
+.header_menu{
+    position: fixed;
+    width: 100vw;
+    height: 70px;    
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr 1fr;
+    justify-content: flex-end;
+    align-items: center;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+nav{
+    display: block;
+    width: 200px;
+    grid-area: nav;
+    transition: transform 1s ease-in-out;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    height: 100%;
+    
+}
+
+article{
+    width: 100%;
+    grid-area: conteudo;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px ;
+}
+
+/* header conf*/
+header h1{
+    text-align: center;
+    font-weight: 900;
+    
+}
+.button_header {
+    background: none;
+    border: none;
+    font-size: 25px;
+    color: var(--cor-botões-header);
+    cursor: pointer;
+    transition: 0.5s all;
+}
+.button_header:hover {
+    color: var(--cor-hover-botoes-header);
+}
+.search{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+form {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    
+}
+#pesquisar{
+    border: 1px solid var(--cor-botões-header);
+    border-radius: 5px 0px 0px 5px;
+    margin-bottom: 5px;
+    width: 20vw;
+    height: 30px;
+    color: var(--cor-botões-header);
+    font-size: 18px;
+    font-weight: 900;
+    background: none;
+}
+#search_button{
+    background: var(--cor-botões-header);
+    height: 30px;
+    width: 60px;
+    border-radius: 0px 5px 5px 0px;
+    border: none;
+    right: -58px;
+    top: 0px;
+    color: var(--cor-fundo);
+    z-index: 1;
+    cursor: pointer;
+    transition: 0.5s all;
+    font-weight: 700;
+}
+
+#search_menu{
+    right: 20px;
+    top: 5px;
+    font-size: 18px;
+}
+#config #alert{
+    font-size: 10vh;
+}
+.profiler{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.profile_menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+}
+.profile_menu img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--cor-hover-botoes-header);
+    overflow: hidden;
+}
+.profile_menu h1{
+    font-weight: 700;
+    font-size: 2vh;
+}
+#name_menu{
+    font-size: 15px;
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    display: flex;
+    align-items: center;
+}
+.git{
+    justify-self: flex-end;
+}
+.name{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+#name_menu_out{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    top: 65px;
+    left: 150px;
+    border-radius: 5px;
+    width: 200px;
+    height: 150px;
+    background: var(--cor-fundo);
+    gap: 1px;    
+    scale: 0;
+}
+#name_menu_out span{
+    width: 100%;
+    height: 30px;
+    background: var(-);
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+   cursor: pointer;
+   transition: 0.5s all;
+}
+#name_menu_out span:hover{
+    background: var(--cor-hover-botoes-header);
+}
+#name_menu_out span a{
+    text-decoration: none;
+    color: var(--cor-botões-header);
+}
+.Menu_none{
+   
+}
+.git{
+    width: 3vw;
+    height: 70px;    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.github{
+    font-size: 35px;
+    width: 2vw;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.github a{
+    color: var(--cor-botões-header);
+    transition: 0.5s all;
+}
+.github a:hover{
+    color: var(--cor-hover-botoes-header);
+}
+/*sidebar*/
+#sidebar{
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+.sidebar_menu{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.sidebar_menu ul p{
+    height: 30px;
+    margin-top: 30px;
+    font-weight: 900;
+    background: var(--cor-sidebar);
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sidebar_menu ul li{
+    width: 200px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+}
+.sidebar_menu ul li:hover{
+    background: var(--cor-botões-header);
+}
+/* article cofing*/
+.teste{
+    width: 10vw;
+    height: 70px;
+    background: var(--cor-hover-botoes-header);
+
+}
+
+/*Responsividade*/
+@media only screen and (max-width: 900px) {
+    #sidebar{
+        display: none;
+    }
+
+  }
+  @media only screen and (max-width: 768px) {
+    .header_menu{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+    header h1{
+        text-align: center;
+        font-weight: 900;
+        
+    }
+    .hambu{
+        font-size: 30px;
+    }
+    .button_header {
+        background: none;
+        border: none;
+        font-size: 20px;
+        color: var(--cor-botões-header);
+        cursor: pointer;
+        transition: 0.5s all;
+    }
+   
+    .search{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 30px;
+    }
+    form {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        
+    }
+    #pesquisar{
+       display: none;
+        }
+    #search_button{
+        display: none;
+    }
+    
+    #search_menu{
+        display: none;
+    }
+    #config #alert{
+        font-size: 10vh;
+    }
+    .profiler{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+    .profile_menu{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    
+    }
+    .profile_menu img{
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background: var(--cor-hover-botoes-header);
+        overflow: hidden;
+    }
+    .profile_menu h1{
+        font-weight: 700;
+        font-size: 1.8vh;
+        padding: 0 10px;
+    }
+    #name_menu{
+        font-size: 15px;
+        cursor: pointer;
+        height: 20px;
+        width: 20px;
+        display: flex;
+        align-items: center;
+    }
+    .name{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+    #name_menu_out{
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        top: 50px;
+        left: 0px;
+        border-radius: 5px;
+        width: 200px;
+        height: 150px;
+        background: var(--cor-fundo);
+        gap: 1px;    
+        scale: 0;
+    }
+       
+    .github{
+        font-size: 25px;
+        width: 2vw;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    .github a{
+        color: var(--cor-botões-header);
+        transition: 0.5s all;
+    }
+    .github a:hover{
+        color: var(--cor-hover-botoes-header);
+    }
+  }
+  @media only screen and (max-width: 550px) {
+ 
+    .header_menu h1{
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .search{
+        width: 20px;
+    }
+    .hambu{
+        font-size: 20px;
+        
+    }
+.button_header{
+    font-size: 15px;
+}
+  .profiler{
+    gap: 5px;
+  }
+.profile_menu h1{
+    font-size: 12px;
+}
+.profile_menu{
+    gap: -5px;
+}
+#name_menu{
+    margin-left: -5px;
+}
+.git{
+    margin-left: -20px;
+}
+}
