@@ -2,136 +2,184 @@
 <html lang="pt-br">
 <head>
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboad Luiz Gustavo</title>
 </head>
 <body>
-    <header>
- <div class="header_menu">
-     <h1>GitHub</h1>
-     <div class="search"><button class="button_header" id="menuMobile" onclick="sidebarMenu()">
-         <ion-icon class="hambu" name="menu"></ion-icon>
-     </button>
-     <form action="">
-        <input type="search" name="pequisar" id="pesquisar">
-        <input type="button" value="Search" id="search_button">
-        <button id="search_menu" class="button_header">
-            <ion-icon name="ellipsis-vertical"></ion-icon>
-        </button>
-     </form> 
-     
-     </div>
-     
-        <div class="profiler">
-     
-                <button id="config" class="button_header">
-                    <ion-icon name="settings"></ion-icon>
-                </button>
-                <button id="alert" class="button_header">
-                    <ion-icon name="notifications"></ion-icon>
-                </button>
-            <div class="profile_menu">
-                <div class="img"> <img src="" alt=""></div>
-                    <h1>Luiz Gustavo</h1>
-                        <button id="name_menu" class="button_header" onclick="nameMenu()">
-                            <ion-icon name="chevron-down"></ion-icon>
-                        </button>
-                    <div id="name_menu_out" class="menu_none" >                        
-                        <span><a href="#"><ion-icon name="person"></ion-icon>Perfil</a></span>
-                        <span><a href="#"><ion-icon name="cog"></ion-icon>Setting</a></span>
-                        <span><a href="#"><ion-icon name="help-circle"></ion-icon>Help</a></span>
-                        <span><a href="#"><ion-icon name="log-out"></ion-icon>Log Out</a></span>
-                    </div>
-     
-            </div>
-        </div>
-        <div class="git">
-            <div class="github">
-                <a href="#"><ion-icon name="logo-github"></ion-icon></a>
-            </div>
-        </div>
- </div>
-    </header>
-    <nav id="sidebar">
-        <div class="sidebar_menu">
-        <ul>
-            <p>Menu</p> 
-            <span></span>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Home</a></li>
-            <span></span>
-            <p>Menu</p> 
-            <span></span>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Home</a></li>
-            <span></span>
-            <p>Menu</p> 
-            <span></span>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Home</a></li>
-            <span></span>
-        </ul>    
-        </div>
+    <!--========== HEADER ==========-->
+    <header class="header">
+        <div class="header__container">
+            <img src="./assets/img/githublogo_ImgID1.png" alt="" class="header__img">
+            
+            <a href="#" class="header__logo">Dashboard</a>
 
-    </nav>
-    <article>
-        <div class="teste"></div>
-        <div class="teste"></div>
-        <div class="teste"></div>
-        <div class="teste"></div>
-        <div class="teste"></div>
-        <div class="teste"></div>
-        <div class="teste"></div>
-        <div class="teste"></div>
-        <div class="teste"></div>
-        <div class="teste"></div>
-        <div class="teste"></div>
-        <div class="teste"></div>
-        <div class="teste"></div>
-        <div class="teste"></div>
-        <div class="teste"></div>
-        <div class="teste"></div>
-        <div class="teste"></div>
-        <div class="teste"></div>
-        <div class="teste"></div>
-        <div class="teste"></div>
-        <div class="teste"></div>
-        <div class="teste"></div>
-        <div class="teste"></div>
-        <div class="teste"></div>
-        <div class="teste"></div>
-        <div class="teste"></div>
-        <div class="teste"></div>
-        <div class="teste"></div>
-        <div class="teste"></div>
-        <div class="teste"></div>
-        <div class="teste"></div>
-        <div class="teste"></div>
-        <div class="teste"></div>
-        <div class="teste"></div>
-        <div class="teste"></div>
+            <div class="header__search">
+                <input type="search" placeholder="Search" class="header__input">
+                <i class='bx bx-search header__icon'></i>
+            </div>
+
+            <div class="header__toggle">
+                <i class='bx bx-menu' id="header-toggle"></i>
+            </div>
+            <i class='bx bxs-cog'></i>
+        </div>
         
-    </article>
+    </header>
+
+    <!--========== NAV ==========-->
+    <div class="nav" id="navbar">
+        <nav class="nav__container">
+            <div>
+                <a href="#" class="nav__link nav__logo">
+                    <i class='bx bxl-graphql'></i>
+                    <span class="nav__logo-name">Dashboard</span>
+                </a>
+
+                <div class="nav__list">
+                    <div class="nav__items">
+                        <h3 class="nav__subtitle">Profile</h3>
+
+                        <a href="#" class="nav__link active">
+                            <i class='bx bx-home nav__icon' ></i>
+                            <span class="nav__name">Home</span>
+                        </a>
+                        
+                        <div class="nav__dropdown">
+                            <a href="#" class="nav__link">
+                                <i class='bx bx-user nav__icon' ></i>
+                                <span class="nav__name">Profile</span>
+                                <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
+                            </a>
+
+                            <div class="nav__dropdown-collapse">
+                                <div class="nav__dropdown-content">
+                                    <a href="#" class="nav__dropdown-item">Passwords</a>
+                                    <a href="#" class="nav__dropdown-item">Mail</a>
+                                    <a href="#" class="nav__dropdown-item">Accounts</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="#" class="nav__link">
+                            <i class='bx bx-message-rounded nav__icon' ></i>
+                            <span class="nav__name">Messages</span>
+                        </a>
+                    </div>
+
+                    <div class="nav__items">
+                        <h3 class="nav__subtitle">Menu</h3>
+
+                        <div class="nav__dropdown">
+                            <a href="#" class="nav__link">
+                                <i class='bx bx-bell nav__icon' ></i>
+                                <span class="nav__name">Notifications</span>
+                                <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
+                            </a>
+
+                            <div class="nav__dropdown-collapse">
+                                <div class="nav__dropdown-content">
+                                    <a href="#" class="nav__dropdown-item">Blocked</a>
+                                    <a href="#" class="nav__dropdown-item">Silenced</a>
+                                    <a href="#" class="nav__dropdown-item">Publish</a>
+                                    <a href="#" class="nav__dropdown-item">Program</a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <a href="#" class="nav__link">
+                            <i class='bx bx-compass nav__icon' ></i>
+                            <span class="nav__name">Explore</span>
+                        </a>
+                        <a href="#" class="nav__link">
+                            <i class='bx bx-bookmark nav__icon' ></i>
+                            <span class="nav__name">Saved</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#" class="nav__link nav__logout">
+                <i class='bx bx-log-out nav__icon' ></i>
+                <span class="nav__name">Log Out</span>
+            </a>
+        </nav>
+    </div>
+
+    <!--========== CONTENTS ==========-->
+    <main>
+        <section>
+           <div class="welcome">
+            <img src="./assets/img/welcome_svg.svg" alt="">
+            <div class="welcome_descrition">
+                <h2>Seja Bem Vindo</h2>
+                <h1>Luiz Gustavo</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat tempore ipsa asperiores suscipit debitis dolorum quisquam, est deserunt voluptate saepe amet, officia nostrum obcaecati voluptatem. Hic illum laborum fuga nisi.</p>
+            </div>
+           </div>
+           <div id="skilsNivel">
+            <div class="skils"><div class="nivels">
+                <div class="porcentagem html5">
+                    <p class="valor">00%</p>
+                </div>
+            </div>
+        <div class="skilname">
+            <p class="name_skils">HTML</p>
+            <div class="icons"><i class='bx bxl-html5' id="html5" ></i></div>
+        </div>
+        </div>
+            <div class="skils"><div class="nivels">
+                <div class="porcentagem css3">
+                    <p class="valor">00%</p>
+                </div>
+            </div>
+        <div class="skilname">
+            <p class="name_skils">CSS</p>
+            <div class="icons"><i class='bx bxl-css3' id="css3"></i></div>
+        </div>
+        </div>
+            <div class="skils"><div class="nivels">
+                <div class="porcentagem js">
+                    <p class="valor">00%</p>
+                </div>
+            </div>
+        <div class="skilname">
+            <p class="name_skils">JAVASCRIPT</p>
+            <div class="icons"><i class='bx bxl-javascript' id="js" ></i></div>
+        </div>
+        </div>
+            <div class="skils"><div class="nivels">
+                <div class="porcentagem pyh">
+                    <p class="valor">00%</p>
+                </div>
+            </div>
+        <div class="skilname">
+            <p class="name_skils">PYTHON</p>
+            <div class="icons"><i class='bx bxl-python' id="pyh" ></i></div>
+        </div>
+        </div>
+    </div>
+    <div class="grafic_weather">
+            
+               
+               <div id="graficoEvolucao">
+                <h1>graficoEvolucao</h1>
+               </div>
+               <div id="weather">
+            <h1>weather</h1>
+               </div>
+        </div>
+        <table>
+            
+        </table>
+        </section>
+    </main>
+
+    <!--========== MAIN JS ==========-->
+
     <script src="./assets/js/script.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
